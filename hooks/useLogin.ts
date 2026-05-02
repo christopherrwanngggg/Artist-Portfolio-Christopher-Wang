@@ -1,21 +1,24 @@
-import { auth, persistance } from "../backend/firebase-config";
+import { auth } from "../backend/firebase-config";
+import {
+  signInWithEmailAndPassword,
+  setPersistence,
+  browserSessionPersistence,
+} from "firebase/auth";
 
 export async function Login(email: string, password: string) {
-  return new Promise<any>((resolve, reject) => {
-    auth
-      .setPersistence(persistance)
-      .then(() => {
-        auth
-          .signInWithEmailAndPassword(email, password)
-          .then((userCred) => {
-            resolve(true);
-          })
-          .catch((err) => {
-            reject(err.code);
-          });
-      })
-      .catch((err) => {
-        console.log("Persistance error");
-      });
-  });
+  try {
+    // set session persistence
+    await setPersistence(auth, browserSessionPersistence);
+
+    // sign in
+    const userCred = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+
+    return userCred;
+  } catch (err: any) {
+    throw err.code || err.message;
+  }
 }
