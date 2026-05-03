@@ -1,9 +1,8 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
-import { getFirestore, serverTimestamp } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-import { getStorage } from "firebase/storage";
+import { getFirestore } from "firebase/firestore";
 
-const config = {
+const firebaseConfig = {
   apiKey: "AIzaSyCsNV_3vUeS6UQzVvDlk-n3PfJh5l3gX1U",
   authDomain: "christopher-wang-design.firebaseapp.com",
   projectId: "christopher-wang-design",
@@ -13,12 +12,7 @@ const config = {
   measurementId: "G-VWBG14MNKJ"
 };
 
-const app = getApps().length ? getApp() : initializeApp(config);
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
-// services
-export const db = getFirestore(app);
 export const auth = getAuth(app);
-export const storage = getStorage(app);
-
-// helper
-export const timeStamp = serverTimestamp();
+export const db = getFirestore(app);

@@ -1,5 +1,5 @@
-import "tailwindcss/tailwind.css";
-import "swiper/swiper-bundle.min.css";
+import "../styles/globals.css";
+//import "swiper/css";
 
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -20,10 +20,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="application-name" content="Garima Malik" />
         <meta name="apple-mobile-web-app-title" content="Garima Malik" />
         <meta name="msapplication-starturl" content="/" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
         <link
           rel="apple-touch-icon"
@@ -67,9 +63,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:site_name" content="Artist Portfolio" />
         <meta name="twitter:image:alt" content="Artist Portfolio" />
 
-        {/* Non-Essential, But Required for Analytics */}
-
-        <meta name="twitter:site" content="@satvikvirmani" />
       </Head>
       <AnimateSharedLayout>
         <Component {...pageProps} />
