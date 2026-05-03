@@ -28,10 +28,8 @@ export const Bio: React.SFC = () => {
             This is me !
           </h1>
           <p className="text-base my-6 w-full md:w-4/5 text-justify mx-auto">
-            {data.aboutme_para1}
           </p>
           <p className="text-base my-6 w-full md:w-4/5 text-justify mx-auto">
-            {data.aboutme_para2}
           </p>
         </Fade>
         <p className="underline cursor-pointer text-sm w-full md:w-4/5 text-center mx-auto hover:text-gray-800">
