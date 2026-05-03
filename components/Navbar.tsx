@@ -27,12 +27,12 @@ export const Navbar: React.FC = () => {
           </li>
           <li className="py-1 px-2 text-sm font-light text-gray-600 hover:text-gray-900">
             <Link href="/portfolio">
-              <span className="cursor-pointer">Portfolio</span>
+              <span className="cursor-pointer">Character Concepts</span>
             </Link>
           </li>
           <li className="py-1 px-2 text-sm font-light text-gray-600 hover:text-gray-900">
-            <Link href="/bio">
-              <span className="cursor-pointer">Bio</span>
+            <Link href="/personal">
+              <span className="cursor-pointer">Personal Work</span>
             </Link>
           </li>
           <li className="py-1 px-2 text-sm font-light text-gray-600 hover:text-gray-900">

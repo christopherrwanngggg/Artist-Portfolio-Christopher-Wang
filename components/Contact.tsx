@@ -14,9 +14,7 @@ export const Contact: React.SFC = () => {
         >
           <div className="text-center">
             <h1 className="text-4xl font-light my-8 text-gray-700">Contact</h1>
-            <h3 className="text-lg font-extralight my-4 text-gray-600">
-              {data.email}
-            </h3>
+
           </div>
           <form
             className="grid grid-rows-6 gap-6"

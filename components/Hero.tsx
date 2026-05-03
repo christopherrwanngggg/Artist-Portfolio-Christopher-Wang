@@ -37,7 +37,7 @@ export const Hero: React.SFC = () => {
       <Fade left>
         <div className="flex flex-col justify-evenly order-2 md:order-1">
           <h1 className="text-5xl md:text-7xl md:w-min my-4 md:m-0 font-light leading-snug">
-            Meet {data.name}
+            {data.name}
           </h1>
           <h2 className="font-extralight text-2xl my-4 md:m-0 text-gray-700">
             {data.job}
